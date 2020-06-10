@@ -1,19 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import TodoItem from './item1';
-import TodoItem2 from './item2';
-import TodoItem3 from './item3';
-import TodoItem4 from './item4';
+
+import App from './App';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <TodoItem />
-    <TodoItem2 />
-    <TodoItem3 />
-    <TodoItem4/>
-  </React.StrictMode>,
+  
+    <App />,
   document.getElementById('root')
 );
 
