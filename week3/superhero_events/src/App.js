@@ -33,7 +33,7 @@ class App extends React.Component {
                   
                 }
                 {
-                    todo.completed = !todo.completed
+                    todo.completed = !todo.completed //maybe the change you need is here. For what you mentioned before i think what you need here is a ternary statement. 
                 }
                 return todo
             })
