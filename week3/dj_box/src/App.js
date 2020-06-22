@@ -55,6 +55,27 @@ handleClick= () => {
     color4="white"
   }
 
+//   partyDj= () => {
+    
+//     this.setState((prevState) => {
+//       let color1;
+//       let color2;
+      
+  
+//      if(prevState.box1 === "black"){
+//        color1="purple"
+//      }
+//      else if (prevState.box1 === "black"){
+//        color1="purple"
+//      }
+//      if(prevState.box2 === "black"){
+//       color2="purple"
+//     }
+//     else if (prevState.box2 === "black"){
+//       color2="purple"
+//     }
+//   })
+// }
     return {
       
       box1:color1,
@@ -67,22 +88,33 @@ handleClick= () => {
     
 })
 }
+
+
 render(){
   
 return(
   <div>
 
   <div className="box1"style={{backgroundColor:"black"}}>
-    <div style={{width: 50, height: 50, margin: 25, backgroundColor:this.state.box1}}>{this.state.box1}</div> 
+    <div style={{width: 500, height: 500, margin: 25, backgroundColor:this.state.box1}}>{this.state.box1}<iframe src="https://archive.org/embed/gd1991-09-14.150163.sbd.cm.miller.flac16" width="500" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div> 
+    
 
-   <div  className="box2"style={{width: 50, height: 50, backgroundColor:this.state.box1, margin: 25}} >{this.state.box1}</div> 
+   <div  className="box2"style={{width: 500, height: 500, backgroundColor:this.state.box1, margin: 25}} >{this.state.box1}<iframe src="https://archive.org/embed/gd1994-09-27.150128.sennme88.ragosa.miller.sirmick.flac1648" width="500" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div> 
 
-   <div className="box3" style={{width: 50, height: 50, margin: 25, backgroundColor:this.state.box1}} >{this.state.box1}</div> 
+   <div className="box3" style={{width: 500, height: 500, margin: 25, backgroundColor:this.state.box1}} >{this.state.box1}<iframe src="https://archive.org/embed/gd1969-10-25.sbd.miller.flac1644" width="500" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div> 
 
-   <div className="box4" style={{width: 50, height: 50, margin: 25, backgroundColor:this.state.box1}}button onClick={this.handleClick}>B >{this.state.box1}</div>
+   <div className="box4" style={{width: 500, height: 500, margin: 25, backgroundColor:this.state.box1}}button onClick={this.handleClick}>B >{this.state.box1}<iframe src="https://archive.org/embed/gd1995-06-25.150028.sbd.dolphinsmile.flac1644" width="500" height="140" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe></div>
    </div> 
 
   
+    {/* <div className="buttonparty">{this.state.box1}<button onClick={this.partyDj}>Button</button></div>
+
+    <div className="buttonprofessional1">{this.state.box1}<button onClick={this.handleClick}>Button</button></div>
+
+    <div className="buttonprofessional2">{this.state.box1}<button onClick={this.handleClick}>Button</button></div>
+
+    <div className="buttonbigTime">{this.state.box1}<button onClick={this.handleClick}>Button</button></div> */}
+
     <div className="button1">{this.state.box1}<button onClick={this.handleClick}>Button</button></div>
   </div>
 
