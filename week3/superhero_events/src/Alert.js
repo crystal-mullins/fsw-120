@@ -4,7 +4,7 @@ import { useAlert } from 'react-alert'
 // import App from "./App"
 // import TodoItem from "./TodoItem"
  
-const A = (props) => {
+const Alert = (props) => {
   const alert = useAlert()
  
   return (
@@ -18,4 +18,4 @@ const A = (props) => {
   )
 }
  
-export default A
+export default Alert

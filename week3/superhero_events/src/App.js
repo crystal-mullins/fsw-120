@@ -2,7 +2,7 @@ import React from "react"
 import TodoItem from "./TodoItem"
 import todosData from "./todosData"
 // import { useAlert } from 'react-alert'
-import A from "./Alert"
+import Alert from "./Alert"
 
 
 
@@ -24,17 +24,9 @@ class App extends React.Component {
 
             const updatedTodos = prevState.todos.map(todo => {
                 if (todo.id === id){
-                  return {
-                    ...todo,
-                    A
-                    
-                    
-                  }
-                  
+                  todo.completed = !todo.completed
                 }
-                {
-                    todo.completed = !todo.completed
-                }
+
                 return todo
             })
             return {
@@ -49,6 +41,7 @@ class App extends React.Component {
         return (
             <div className="todo-list">
                 {todoItems}
+                
             </div>
         )    
     }

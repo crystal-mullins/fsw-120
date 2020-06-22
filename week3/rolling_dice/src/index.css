@@ -1,5 +1,7 @@
 body {
-  margin: 0;
+  margin: 10%;
+  padding: 10%;
+  border: 10%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +13,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.num1{
+  font-size: xx-large;
+  color: blue;
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  margin:10%;
+}
+
+.num2{
+  font-size: xx-large;
+  color: blue;
+  background-color:silver;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  margin:10%;
+
+}
+.num3{
+  font-size: xx-large;
+  color: blue;
+  background-color: coral;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  margin:10%;
+}
+.num4{
+  font-size: xx-large;
+  color: blue;
+  background-color: lightgreen;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  margin:10%;
+}
+.num5{
+  font-size: xx-large;
+  color: blue;
+  background-color:yellow;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  margin:10%;
+}
+/* .num6{
+  font-size: xx-large;
+  color: blue;
+  background-color:pink;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+  top: 100px
+} */
+
+

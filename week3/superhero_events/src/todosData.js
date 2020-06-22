@@ -13,7 +13,7 @@ const todosData =[
 },
 {
     name: "Maya",
-    show: "Maya a Bee",
+    show: "Maya the Bee",
     catchPhrase: "It certainly is a great day to be alive.",
     imageName: "https://d1xfgk3mh635yx.cloudfront.net/sites/default/files/styles/original/public/image/featured/1031149-studio-100-varta-sign-licensing-deal-maya-bee.jpg?itok=j2td6KGp"
 },
