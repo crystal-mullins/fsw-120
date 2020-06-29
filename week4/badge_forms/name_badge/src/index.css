@@ -12,12 +12,13 @@ code {
     monospace;
 }
 .wrapper {
-  display: table-row-group;
-  
-  flex-wrap: wrap;
-   /* grid-row: 100px, 100px; */
-  grid-template-areas: 100px, 100px;
+  display: grid;
+  padding: 10%;
+border: solid black;
    
+  grid-template-columns: 45% 45%;
+  grid-gap: 10%;
+  position: relative;
   
   background-color: lightgreen
 }

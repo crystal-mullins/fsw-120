@@ -12,13 +12,12 @@ class FormBadge extends Component {
             email:'',
             birthPlace:'',
             favFood:'',
-            nameBadges:[]
+            nameBadges:[],
+            handleDelete: this.handleDelete
         }
     }
     handleChange = (e) => {
    
-    // let name = e.target.name
-    // let value = e.target.value
     const {name, value} = e.target
     this.setState({ [name] : value})
     
@@ -33,8 +32,7 @@ class FormBadge extends Component {
             lastName: this.state.lastName,
             phone: this.state.phone,
             email: this.state.email,
-            birthPlace: this.state.birthPlace,
-            favFood: this.state.favFood
+            
         }
         this.setState({nameBadges: [ newUserData, ...this.state.nameBadges]})
 
@@ -48,9 +46,11 @@ class FormBadge extends Component {
     render(){
         
         return(
-            <div>
-                First Name:
+            <div className="user_list">
+                
+                
                 <form onSubmit={this.handleSubmit}>
+                First Name
                 <input
                 type="text"
                 name="firstName"
@@ -82,20 +82,7 @@ class FormBadge extends Component {
                 onChange={this.handleChange}
                 required={true}
                 />
-                Birth Place:
-                <input
-                type="text"
-                name="birthPlace"
-                value={this.state.birthPlace}
-                onChange={this.handleChange}
-                />
-                Favorite Food
-                <input 
-                type="text"
-                name="favFood"
-                value={this.state.favFood}
-                onChange={this.handleChange}
-                />
+               
                 <button >On Submit</button>
 
                 </form>

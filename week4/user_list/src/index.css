@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.user_list{
+  display: grid;
+  grid-template-columns: 25% 25%;
+  background-color: burlywood;
+  margin: 10%;
+  padding: 10%;
+
+}
+
+.user_list_return{
+  font-size: 18px;
+  color:blue
+}

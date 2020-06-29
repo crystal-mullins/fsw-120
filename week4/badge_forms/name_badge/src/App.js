@@ -15,25 +15,53 @@ class App extends Component{
         member: "",
         favColor: "blue"
       }
-      this.handelClick = this.handelClick.bind(this)
-      this.handleChange = this.handleChange.bind(this)
+      
     }
 
-    handelClick(){
+    handleClick1= () => {
       this.setState(prevState => {
         return {
             isLoggedIn: !prevState.isLoggedIn
     }
   })
 }
-handleChange(event) {
-  const {name, value, type, checked} = event.target
-  type === "checkbox" ? this.setState({
-      [name]: checked }) : this.setState({ [name]: value
-  })
+handleChange = (e) => {
+   
+  const {name, value} = e.target
+  this.setState({ [name] : value})
+  
+ 
+
+  }
+
+  handleSubmit = (e) =>{
+      e.preventDefault()
+      let newUserData= {
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          phone: this.state.phone,
+          email: this.state.email,
+          birthPlace: this.state.birthPlace,
+          favFood: this.state.favFood
+      }
+      this.setState({nameBadges: [ newUserData, ...this.state.nameBadges]})
+
+  }
+
+  handleDelete = (i) => {
+      let updatedBadgeArray = this.state.nameBadges
+      updatedBadgeArray.splice(i, 1)
+      this.state({nameBadges: updatedBadgeArray})
+  }
+
+
+handleChange= (e) => {
+      const {name, value, type, checked} = e.target
+      type === "checkbox" ? this.setState({
+      [name]: checked }) : this.setState({ [name]: value})
 }
 
-componentDidMount(){
+componentDidMount= () => {
       setTimeout(() => {
         this.setState({
           isLoading: false
@@ -41,34 +69,33 @@ componentDidMount(){
       }, 1500)
     }
 
-    render(){
+    render=()=> {
       let buttonText = this.state.isLoggedIn ? "Log Out" : "Log In"
       let displayText = this.state.isLoggedIn ? "Logged in" : "Logged out"
         return ( 
           <form>
+            <label>First Name</label>
             <input 
             
                     type="text" 
                     value={this.state.firstName} 
                     name="firstName" 
-                    placeholder="First Name" 
-                    onChange={this.handleChange} 
+                    onChange={this.handleSubmit} 
                 />
-                <br />
+              <label>Last Name</label>
                 
                 <input 
                     type="text" 
                     value={this.state.lastName} 
                     name="lastName" 
-                    placeholder="Last Name" 
-                    onChange={this.handleChange} 
+                    onChange={this.handleSubmit} 
                 />
                   <h1>{this.state.firstName} {this.state.lastName}</h1>
                   <div>
                   {this.state.isLoading ? <h1>Loading...</h1> :
                         <Conditional />}
                   
-                  <button onClick={this.handelClick}>{buttonText}</button>
+                  <button onClick={this.handleClick}>{buttonText}</button>
                         <h2>{displayText}</h2>
                         </div>
                       

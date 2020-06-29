@@ -1,5 +1,5 @@
 import React, {Component}from 'react';
-
+import BadgeCard from './BadgeCard'
 
 class FormBadges extends Component{
     constructor(){
@@ -18,7 +18,7 @@ class FormBadges extends Component{
       }  
     }
   
-    handleChange(e) => {
+    handleChange= (e) => {
       
       const {name, value} = e.target
       this.setState({ [name]: value })
@@ -36,7 +36,7 @@ class FormBadges extends Component{
         }
         this.setState({
           nameBadges:[newUser, ...this.state.nameBadges]})
-        
+        }     
     
       
       render(){
@@ -101,28 +101,15 @@ class FormBadges extends Component{
                         placeholder="Favorite Food" 
                        onChange={this.handelChange}
                     />
-                    {/* <h1>{this.state.firstName} {this.state.lastName}</h1>
-
-                    <h1>{this.state.email} {this.state.number}</h1>
-
-                    <h1>{this.state.PlaceofBirth} {this.state.favFood}</h1> */}
+                    
 
                     <textarea Tell is about yourself/>
                     <div>
-                    {/* {this.handelChange}
-                    <h2>Your name is {this.state.firstName}</h2>
-                    <button onChange={this.handelChange}>Submit</button> */}
-                    </div>
-            <div>
-                    {/* <Badge
-                      
-                      name="badge" 
-                      variant="primary"
-                      value={this.state.firstName}
-                      onChange={this.handleChange}>
-                      Badge 
-                      
-                    </Badge> */}
+                    
+                    <BadgeCard
+                    nameBadges={this.state.nameBadges}
+                    handleDelete={this.state.handleDelete}
+                    />
 
                    
              
@@ -147,8 +134,9 @@ class FormBadges extends Component{
                 </form>
                   
                   
-          )}
-    } 
-}                
+          )
+        };
+    }
+               
 
-export default FormBadges
+export default FormBadges;
