@@ -11,7 +11,7 @@ class FormBadge extends Component {
             phone:'',
             email:'',
             birthPlace:'',
-            favFood:'',
+            favoriteFood:'',
             nameBadges:[],
             textArea:'', 
             handleDelete: this.handleDelete
@@ -34,7 +34,7 @@ class FormBadge extends Component {
             phone: this.state.phone,
             email: this.state.email,
             birthPlace: this.state.birthPlace,
-            favFood: this.state.favFood,
+            favoriteFood: this.state.favoriteFood,
             textArea: this.state.textArea,
             
             
@@ -128,23 +128,23 @@ class FormBadge extends Component {
                
                 <input 
                 type="text"
-                name="favFood"
+                name="favoriteFood"
                 placeholder="Favorite Food:"
                 value={this.state.favFood}
                 onChange={this.handleChange}
                 pattern=".{3,}" 
                 required title="Minimum 3 characters required"
                 />
-                
+          
+        
                 <textarea 
                 name="textArea"
                 value={this.state.textArea}
                 onChange={this.handleChange}style={{gridColumn:"span 2"}} placeholder="Tell us about yourself"
                 pattern=".{3,}" 
-                required title="Minimum 3 characters required"
-                />
+                required title="Minimum 3 characters required"></textarea>
+        
                 
-                    <div></div>
                 <button style={{gridColumn:"span 2", width:"50%", marginLeft:"25%"}}>On Submit</button>
 
                 </form>

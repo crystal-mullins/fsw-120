@@ -19,7 +19,7 @@ class BadgeList extends Component {
                 phone={card.phone}
                 email={card.email}
                 birthPlace={card.birthPlace}
-                favFood={card.favFood}
+                favoriteFood={card.favoriteFood}
                 textArea={card.textArea}
                 handleDelete={this.props.handleDelete}
                 

@@ -2,10 +2,10 @@ import React from 'react'
 
 
 
-const BadgeCard = ({ index, firstName, lastName, phone, email, birthPlace, favFoods, textArea, handleDelete }) => {
+const BadgeCard = ({ index, firstName, lastName, phone, email, birthPlace, favoriteFood, textArea, handleDelete }) => {
     return(
         <div> 
-            <h1 style={{backgroundColor:"grey"}}>Badge</h1>
+            <h1 style={{backgroundColor:"grey"}}              >Badge</h1>
         <div className="wrapper">
 
 
@@ -14,7 +14,7 @@ const BadgeCard = ({ index, firstName, lastName, phone, email, birthPlace, favFo
                 <p>Phone: {phone}</p>
                 <p>email: {email}</p>
                 <p>Birth Place: {birthPlace}</p>
-                <p>Favorite Foods: {favFoods}</p>
+                <p>Favorite Food: {favoriteFood}</p>
                 <p>About You: {textArea}</p>
                 <button onClick={ () => handleDelete(index)} 
                 > Delete User</button>
