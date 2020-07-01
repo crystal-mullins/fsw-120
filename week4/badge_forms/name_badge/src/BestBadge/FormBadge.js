@@ -45,7 +45,7 @@ class FormBadge extends Component {
             phone:'',
             email:'',
             birthPlace:'',
-            favFood:'',
+            favoriteFood:'',
             textArea:'' })
         
 
@@ -129,7 +129,7 @@ class FormBadge extends Component {
                 type="text"
                 name="favoriteFood"
                 placeholder="Favorite Food:"
-                value={this.state.favFood}
+                value={this.state.favoriteFood}
                 onChange={this.handleChange}
                 pattern=".{3,}" 
                 required title="Minimum 3 characters required"/>
