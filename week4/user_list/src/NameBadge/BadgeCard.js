@@ -13,7 +13,7 @@ const BadgeCard = ({ index, firstName, lastName, phone, email, birthPlace, favFo
                 <li>{phone}</li>
                 <li>{email}</li>
                 
-                {/* <button onClick={ () => handleDelete(index)}> Delete User</button> */}
+                <button onClick={ () => handleDelete(index)}> Delete User</button>
 
             </ol>
     </div>

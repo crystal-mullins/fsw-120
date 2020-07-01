@@ -39,15 +39,14 @@ class FormBadge extends Component {
             
             
         }
-        this.setState({nameBadges: [ newUserData, ...this.state.nameBadges]})
-            // firstName:'',
-            // lastName:'',
-            // phone:'',
-            // email:'',
-            // birthPlace:'',
-            // favFood:'',
-            // nameBadges:[],
-            // textArea:'' })
+        this.setState({nameBadges: [ newUserData, ...this.state.nameBadges],
+            firstName:'',
+            lastName:'',
+            phone:'',
+            email:'',
+            birthPlace:'',
+            favFood:'',
+            textArea:'' })
         
 
     }
@@ -133,10 +132,9 @@ class FormBadge extends Component {
                 value={this.state.favFood}
                 onChange={this.handleChange}
                 pattern=".{3,}" 
-                required title="Minimum 3 characters required"
-                />
-          
-        
+                required title="Minimum 3 characters required"/>
+
+                
                 <textarea 
                 name="textArea"
                 value={this.state.textArea}

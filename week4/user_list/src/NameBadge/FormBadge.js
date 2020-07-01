@@ -34,14 +34,22 @@ class FormBadge extends Component {
             email: this.state.email,
             
         }
-        this.setState({nameBadges: [ newUserData, ...this.state.nameBadges]})
+        this.setState({nameBadges: [ newUserData, ...this.state.nameBadges],
+            firstName:'',
+            lastName:'',
+            phone:'',
+            email:'',
+            birthPlace:'',
+            favFood:'',
+
+        })
 
     }
 
     handleDelete = (i) => {
         let updatedBadgeArray = this.state.nameBadges
         updatedBadgeArray.splice(i, 1)
-        this.state({nameBadges: updatedBadgeArray})
+        this.setState({nameBadges: updatedBadgeArray})
     }
     render(){
         
