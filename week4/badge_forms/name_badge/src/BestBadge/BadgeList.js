@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import BadgeCard from './BadgeCard'
-// import FormBadge from './FormBadge'
+
 
 class BadgeList extends Component {
     
