@@ -4,106 +4,58 @@ class DiceBox extends React.Component {
     constructor() {
         super()
         this.state = {
-            
           num1: 0,
           num2: 0,
           num3: 0,
           num4: 0,
           num5: 0
-
-        }
-        this.handleClick = this.handleClick.bind(this)
-        this.handleClick2 = this.handleClick2.bind(this)
-        this.handleClick3 = this.handleClick3.bind(this)
-        this.handleClick4 = this.handleClick4.bind(this)
-        this.handleClick5 = this.handleClick5.bind(this)
-        
+         }
     }
     
-  
-         
-    handleClick() {
+  handleClick =() => {
       this.setState((prevState) => {
     
         return {
           num1:  Math.floor(Math.random() * 6),
-        
-        
-
-        
           num2:  Math.floor(Math.random() * 6),
-        
-      
           num3:  Math.floor(Math.random() * 6),
           num4:  Math.floor(Math.random() * 6),
           num5:  Math.floor(Math.random() * 6)
-          
         }  
-        
-
       })
-        
-     }
-     handleClick2() {
-       
-      this.setState(prevState => {
+  }
+
+     handleClick2 = () => {
+        this.setState(prevState => {
         return {
           num2:  Math.floor(Math.random() * 6)
-    //       // num2:  Math.floor(Math.random() * 6),
-    //       // num3:  Math.floor(Math.random() * 6),
-    //       // num4:  Math.floor(Math.random() * 6),
-    //       // num5:  Math.floor(Math.random() * 6),
-          
-          
-        } 
-
+        }
       })
-        
-      }
+    }
      
-    // handleClick() {
-    //   this.setState(prevState => {
-    //     return {
-    //       num2:  Math.floor(Math.random() * 6),
-          
-          
-    //     } 
-
-    //   })
-        
-    // }
-    handleClick3() {
+    
+    handleClick3 = () => {
       this.setState(prevState => {
         return {
           num3:  Math.floor(Math.random() * 6),
-          
-          
         } 
-
       })
-        
     }
-    handleClick4() {
+
+    handleClick4 = ()=> {
       this.setState(prevState => {
         return {
           num4:  Math.floor(Math.random() * 6),
-          
-          
         } 
-
       })
-        
     }
-    handleClick5() {
+
+    handleClick5 = () => {
       this.setState(prevState => {
         return {
-          num5:  Math.floor(Math.random() * 6),
-          
-          
-        } 
-
+          num5:  Math.floor(Math.random() * 6),  
+        }
       })
-        
     }
     
     render() {

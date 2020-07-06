@@ -147,7 +147,7 @@ class FormBadge extends Component {
 
                 </form>
                 <BadgeList 
-                nameBadges={this.state.nameBadges}
+                Badges={this.state.nameBadges}
                 handleDelete={this.state.handleDelete}
                 />
                

@@ -1,19 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState  } from 'react';
+// import earthPaint from './elena-mozhvilo-eA32JIBsSu8-unsplash.jpg'
+
+// import axios from 'axios'
 
 
 function Register() {
-    const [name, setName ] = useState('')
-    const [password, setName ] = useState('')
+    const [firstName, setName ] = useState('')
+    const [password, setPassword ] = useState('')
+
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        console.log(value)
+        setName(value)
+}
+    
+    // console.log(firstName)
     
   return (
     <div >
+
       Time to Register
-        <form onSubmit={handleSubmit}>
-            name:
+        <form>
+           Name:
             <input
                 type='text'
-                name='firstName'
-                value='firstName'
+                name='firsName'
+                // value='firstName'
                 onChange={(e) => setName(e.target.value)}
             />
             Password: 
@@ -21,12 +33,15 @@ function Register() {
             <input 
                 type='password'
                 name='password'
-                value='firstName'
+                // value='firstName'
                 onChange={(e) => setPassword(e.target.value)}
             />
-            {/* <button> Submit </button> */}
+            <button> Submit </button>
+
+            
         </form>
-      
+        {/* <img src={earthPaint}  alt='earthPaint 'width="300px" height="300px"/>
+            name: */}
     </div>
   );
 }

@@ -10,13 +10,7 @@ import Register from './components/register/register'
 function App() {
   return (
     <div className="App">
-      Hello ladies and gentelmen.
-      <ul>
-        <ol> This is your wake up call </ol>
-        <ol> Evil is no longer hideing </ol>
-        <ol> We have to save the World from Evil </ol>
-        <ol> Evil is coming for us all </ol>
-      </ul>
+      
       
       <Navbar />    
           <Switch>
