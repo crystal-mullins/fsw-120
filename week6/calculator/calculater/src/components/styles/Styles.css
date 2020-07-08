@@ -1,0 +1,14 @@
+.form-wrapper{
+    display: flex grid;
+   grid-template-columns: 50% 50%;
+   background-color: lightskyblue;
+   color: darkblue;
+   margin: 10%;
+   padding: 10%;
+}
+
+.button-wrap{
+    
+    margin: 10%;
+    padding: 10%;
+}

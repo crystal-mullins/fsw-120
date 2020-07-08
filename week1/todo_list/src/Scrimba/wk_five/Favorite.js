@@ -4,6 +4,7 @@ import React from "react"
 import Toggler from "./Toggler"
 
 function Favorite(props) {
+    
     return (
         <Toggler render={
             (on, toggle) => (
