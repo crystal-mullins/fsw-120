@@ -64,7 +64,7 @@ class CalculatorForm extends Component{
                        required={true}
                   />
                   
-                    <span className="button-wrap">
+                    <span>
                     Select Operator:
 
                         <button onClick={(e)=> {
