@@ -33,7 +33,7 @@ class BadgeList extends Component {
                     {mappedCards}
             </div>
         )
-    }
+    };
 }
 
 export default BadgeList
