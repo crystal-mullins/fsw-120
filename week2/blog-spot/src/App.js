@@ -4,14 +4,14 @@ import Navbar from './Components/Navbar'
 import BlogList from './Components/BlogList'
 // import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div >
      
       <Navbar />
       <Heading />
       
-      <BlogList Blogs={this.props.bloggerData}
+      <BlogList Blogs={props.bloggerData}
      />
     </div>
   );

@@ -4,15 +4,15 @@ import React from 'react'
 
 
 
-const BlogCard = ({title, subTitle, arthor, date }) => {
+function BlogCard(props)  {
     
     return(
         <div> 
-            <h1 style={{backgroundColor: "red"}}>Blogs{title} </h1>
+            <h1 style={{fontWeight:"bold"}}>{props.title} </h1>
         <div className="wrapper">
-                <p>{subTitle}</p>
-                <p>{arthor}</p>
-                <p>{date}</p>
+                <p>{props.subTitle}</p>
+                <p>{props.author}</p>
+    <p style={{color:"blue"}}>{props.date} </p>
                 </div>
         </div>
 );

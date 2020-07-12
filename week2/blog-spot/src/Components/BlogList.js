@@ -1,26 +1,24 @@
 import React, {Component} from 'react'
 
+import bloggerCard from './BlogData'
 import BlogCard from './BlogCard'
-
 
 class BlogList extends Component {
     
     render(){
         console.log(this.props)
         
-        const mappedCards = this.props.bloggerCard.map((card) => {
-            return(
+        const mappedCards = bloggerCard.map(card =>
+        
                 < BlogCard
-                title={BlogCard.title}
-                subTitle={BlogCard.subTitle}
-                arther={BlogCard.author}
-                date={BlogCard.date}
-                
-                
-                
+                key={card.title}
+                title={card.title}
+                subTitle={card.subTitle}
+                author={card.author}
+                date={card.date}
                 />
-            )
-        })
+        )
+        
         return(
                 <div>
                     
@@ -29,5 +27,6 @@ class BlogList extends Component {
         )
     }
 }
+
 
 export default BlogList

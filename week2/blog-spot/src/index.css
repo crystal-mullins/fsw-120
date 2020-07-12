@@ -13,21 +13,28 @@ code {
 }
 
 .navbar{
-  display: flex;
-  background-color: grey;
-  color: white;
-  height: 155px;
-  padding: 5%;
-  margin: 10%;
-  justify-content: center;
-}
-
-.clean-blog{
-  display: flex;
+  
   
   background-color: grey;
   color: white;
-  height: 250px;
-
+  height: 300px;
+  
 }
 
+
+
+.left{
+  float:left;
+}
+.right{
+  float:right;
+  /* display:inline; */
+}
+.center1{
+  margin-top: 100px;
+  text-align: center;
+}
+.center{
+ 
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 
-const bloggerData =[
+const bloggerCard =[
 
     {
 
@@ -44,7 +44,7 @@ const bloggerData =[
     }
 
 ]
-export default bloggerData
+export default bloggerCard
 
 
 
