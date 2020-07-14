@@ -50,21 +50,7 @@ class FormBadge extends Component {
         
 
     }
-//     handleClearForm= (e) => {
-//         // Logic for resetting the form
-//         e.preventDefault();
-//         this.setState({ 
-//             firstName:'',
-//             lastName:'',
-//             phone:'',
-//             email:'',
-//             birthPlace:'',
-//             favFood:'',
-//             nameBadges:[],
-//             textArea:'' 
-//         },
-//       )
-// }
+
     handleDelete = (i) => {
         let updatedBadgeArray = this.state.nameBadges
         updatedBadgeArray.splice(i, 1)
