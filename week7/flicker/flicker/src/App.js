@@ -1,14 +1,26 @@
 import React from 'react';
-
 import './App.css';
-import FlickerForm from './Components/FlickerForm';
+import { Route, Switch } from 'react-router-dom'
+import Navbar from './Components/Navbar'
+import Home from './Components/Home'
+import FlickersList from './Components/Flickers'
+import Login from './Components/Login'
 
-function App() {
+const App = () => {
+
   return (
-    <div >
-      <FlickerForm />
+    <div className="App">
+
+      <Navbar />
+
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/login' component={Login} />
+        <Route path='/tweets' component={FlickersList} />
+      </Switch>
+
     </div>
   );
 }
 
-export default App;
+export default App
