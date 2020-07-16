@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+.home-wrapper{
+  display:  grid;
+  grid-template-columns:column;
+  padding: 5%;
+  margin: 5%;
+  border: 20px solid blue;
+  background-color:plum;
+  border-radius: 5%;
+}
+
+
+.home-form-wrapper{
+  display:  grid;
+  grid-template-columns:column;
+  padding: 5%;
+  margin: 5%;
+  border: 20px solid blue;
+  background-color: black;
+  border-radius: 5%;
+}
+.home-page{
+  background-color:gray;
+}
+.flick-input-box{
+border-radius: 5%;
+ margin:5%;
+ padding:5%;
+ background-color: yellow;
+ border: 20px solid blue;
+justify-content: center;  
+
+}
+
+.author-box{
+  border-radius: 5%;
+  margin:5%;
+  padding:5%;
+  background-color:lightpink;
+  border: 20px solid blue;
+ justify-content: center;  
+ 
+ }
+
+ .date-box{
+  border-radius: 5%;
+  margin:5%;
+  padding:5%;
+  background-color: lightskyblue;
+  border: 20px solid blue;
+ justify-content: center;  
+ 
+ }
+ 

@@ -1,8 +1,9 @@
 
-import React , {Component}from './node_modules/react'
-import EditForm from "./Components/FlickerEdit"
+import React , {Component}from 'react'
+// import EditForm from "./FlickerEdit"
+import FlickerForm from './FlickerForm'
 
-class FlickersCard extends Component{
+class FlickerCard extends Component{
     constructor(props){
         super(props)
         var { index, authors, flickers, date,  handleDelete, handleEdit, id } =this.props
@@ -44,4 +45,4 @@ class FlickersCard extends Component{
 
 
 
-export default FlickersCard;
+export default FlickerCard;

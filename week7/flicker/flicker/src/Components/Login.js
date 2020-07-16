@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { withAuth } from '../providers/AuthProviders'
 
+// handleAuthLogin, getToken, userToken
 
-
-const Login = ({ handleAuthLogin, getToken, userToken }) => {
+const Login = ({ imGlobalFunc }) => {
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
 
@@ -15,14 +15,16 @@ const Login = ({ handleAuthLogin, getToken, userToken }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    handleAuthLogin ()
+    // handleAuthLogin ()
   }
 
 
-console.log(userToken)
+
 
   return (
+  
     <div>
+       {imGlobalFunc()}
       <form onSubmit={handleSubmit}>
         User Name:
         <input 

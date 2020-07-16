@@ -1,6 +1,6 @@
-import React, {Component} from './node_modules/react'
-import FlickerList from './Components/FlickerList'
-// import axios from './node_modules/axios'
+import React, {Component} from 'react'
+import FlickerList from './FlickerList'
+import axios from 'axios'
 
 class EditForm extends Component {
     constructor(props){
@@ -19,10 +19,19 @@ class EditForm extends Component {
     this.setState({ [name] : value})
     }
 
+    handleDelete = (i) => {
+        let updatedBadgeArray = this.state.nameBadges
+        updatedBadgeArray.splice(i, 1)
+        this.state({nameBadges: updatedBadgeArray})
+    }
+  
+
        
     handleEdit = (editState, id) => {
         let editedFlickerArray = this.state.flickerCards
-console.log("edited State", editState)
+        editedFlickerArray.splice(editState, id)
+
+// console.log("edited State", editState)
 const {authors, flickers, date,} = editState
     var editedFlicker= {
         authors,
@@ -30,10 +39,10 @@ const {authors, flickers, date,} = editState
         date
 }
 
-// axios.put('./bountys/' + id, updatedBounty ).then(res => {
+axios.put('./flickers/' + id, editedFlicker ).then(res => {
    
-//     console.log(res)
-// })
+    console.log(res)
+})
 }
 
 

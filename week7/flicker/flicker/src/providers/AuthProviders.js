@@ -1,4 +1,4 @@
-import React, {Component} from '../node_modules/react'
+import React, {Component} from 'react'
 
 const AuthContext = React.createContext()
 
@@ -7,15 +7,27 @@ class AuthProvider extends Component{
     constructor(){
         super()
         this.state={
+            inTestState: 'hi'
+        //    userName:'',
+        //    password:'',
+
 
         }
     }
+
+   handleSubmit = () => {
+    console.log('fun run')
+}
+
     render(){
         return(
             <AuthContext.Provider
-                value={{
+                value={
+                    {
                     ...this.state,
-                }}
+                   handleSubmit: this.handleSubmit
+                }
+            }
             
             
             >

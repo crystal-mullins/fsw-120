@@ -1,8 +1,8 @@
 // import React, {Component} from './node_modules/react'
 
 import React, {Component} from 'react'
-import FlickerList from './Components/FlickerList'
-// import axios from './node_modules/axios'
+import FlickerList from './FlickerList'
+import axios from 'axios'
 
 
 
@@ -13,20 +13,20 @@ export default class FlickerForm extends Component {
             authors:'',
             flickers:'',
             date:'',
-            flickBadges:[],
+            flikerCard:[],
             handleDelete: this.handleDelete,
             handleEdit: this.handleEdit
         }
     }
-    // componentDidMount(){
-    //     axios.get('/bountys')
-    //     .then(res =>{
-    //         console.log("res.data", res.data)
-    //         this.setState({
-    //             bountyBadges:res.data
-    //         })
-    //     })
-    // }
+    componentDidMount(){
+        axios.get('/flickers')
+        .then(res =>{
+            console.log("res.data", res.data)
+            this.setState({
+              flickerCard :res.data
+            })
+        })
+    }
     handleChange = (e) => {
     const {name, value} = e.target
     this.setState({ [name] : value})
@@ -103,7 +103,7 @@ export default class FlickerForm extends Component {
 
                 </form>
                 <FlickerList 
-                flickerBadges={this.state.flickerBadges}
+                flickerCard={this.state.flickerCard}
                 handleDelete={this.state.handleDelete}
                 handleEdit={this.state.handleEdit}
                 
