@@ -1,7 +1,4 @@
 import React, {Component} from 'react'
-// import FlickerList from './FlickerList'
-// import axios from 'axios'
-
 
 
 export default class FlickerForm extends Component {
@@ -16,16 +13,7 @@ export default class FlickerForm extends Component {
             handleEdit: this.handleEdit
         }
     }
-    componentDidMount(){
-        console.log("this is flicker form")
-        // axios.get('/flickers')
-        // .then(res =>{
-        //     console.log("res.data", res.data)
-        //     this.setState({
-        //       flickerCard :res.data
-        //     })
-        // })
-    }
+    
     handleChange = (e) => {
     const {name, value} = e.target
     this.setState({ [name] : value})
@@ -39,22 +27,11 @@ export default class FlickerForm extends Component {
             flickers: this.state.flickers,
             date: this.state.date,   
         }
-        // this.setState( {
-        //     newFlickerData: this.state.newFlickerData,
-        //     authors: this.state.authors,
-        //     flickers: this.state.flickers,
-        //     date:'',    
-        //  })
+       
          this.props.handleSubmit(newFlickerData)
     }
 
-    // handleDelete = (i) => {
-    //     let editedFlickerArray = this.state.flickerBadges
-    //     editedFlickerArray.splice(i, 1)
-    //     this.setState({flickerBadges: editedFlickerArray})
-    // }
-       
-    
+   
     render(){
         
         return(

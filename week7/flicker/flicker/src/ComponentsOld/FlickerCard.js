@@ -1,6 +1,4 @@
-
 import React , {Component}from 'react'
-// import EditForm from "./FlickerEdit"
 import FlickerForm from './FlickerForm'
 
 class FlickerCard extends Component{
@@ -13,12 +11,7 @@ class FlickerCard extends Component{
     }
     handleSubmit = (newObject) =>{
 console.log(newObject)
-        // e.preventDefault()
-        // let newFlickerData= {
-        //     authors: this.state.authors,
-        //     flickers: this.state.flickers,
-        //     date: this.state.date,   
-        // }
+
         this.setState( {
            
             authors:newObject.authors,
@@ -33,14 +26,19 @@ console.log(newObject)
     render(){
     return(
         <div> 
-            <h1 style={{backgroundColor:" limegreen"}}>Flickers of Light in the dark</h1>
+            <h1 className='card-banner'>Flickers of Light in the dark</h1>
         <div className="card-wrapper">
 
+                <div className='flicker-card'>
 
                 <p>Flicker of light: {this.state.flickers}</p>
                 
                 <p>author: {this.state.authors}</p>
                 <p>date {this.state.date}</p>
+
+
+                </div>
+               
                 
                 
                 <button style={{gridColumn:"span 2", width:"20%", marginLeft:"20%", backgroundColor:"skyblue"}} id={this.state.id} onClick={ (e) => this.state.handleDelete(this.state.index,e.target.id)} 

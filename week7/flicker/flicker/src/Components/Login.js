@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { withAuth } from '../providers/AuthProviders'
+import gratefuldeadJBW from './gratefuldeadJBW.jpeg'
 
 // handleAuthLogin, getToken, userToken
 
@@ -42,6 +43,11 @@ const Login = ({ imGlobalFunc }) => {
         />
         <button> Login </button>
       </form>
+      <div>
+        
+      <img src={gratefuldeadJBW}  alt='gratefuldeadJBW 'width="400px" height="400px" 
+     />
+      </div>
     </div>
   );
 }

@@ -3,6 +3,8 @@ import '../App.css'
 import { Link } from 'react-router-dom'
 import { withAuth } from '../providers/AuthProviders'
 import flickerimg from './flickerimg1.jpg'
+
+
 const Navbar = ({handleUserLogout}) => {
 
   return (
@@ -17,8 +19,11 @@ const Navbar = ({handleUserLogout}) => {
       <img src={flickerimg}  alt='flickerimg 'width="800px" height="150px" />
 
       </div>
+      <div>
+      <iframe src="https://archive.org/embed/gd1994-03-21.140296.set2.dsbd.wise.miller.clugston.flac1644" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+      </div>
       
-     
     </div>
   );
 }
