@@ -11,30 +11,51 @@ class FlickerCard extends Component{
             index, authors, flickers, date,  handleDelete, handleEdit , id, editing: false
         }
     }
+    handleSubmit = (newObject) =>{
+console.log(newObject)
+        // e.preventDefault()
+        // let newFlickerData= {
+        //     authors: this.state.authors,
+        //     flickers: this.state.flickers,
+        //     date: this.state.date,   
+        // }
+        this.setState( {
+           
+            authors:newObject.authors,
+            flickers:newObject.flickers,
+            date:newObject.date, 
+            editing:false   
+         })
+    }
+
     
   
     render(){
     return(
         <div> 
-            <h1 style={{backgroundColor:"aqua"}}>Flickers of Light in the dark</h1>
-        <div className="wrapper">
+            <h1 style={{backgroundColor:" limegreen"}}>Flickers of Light in the dark</h1>
+        <div className="card-wrapper">
 
 
-                <p>Flicker of light: {this.state.flicker}</p>
-                {console.log("bountyCardState ", this.state)}
-                <p>author: {this.state.author}</p>
+                <p>Flicker of light: {this.state.flickers}</p>
+                
+                <p>author: {this.state.authors}</p>
                 <p>date {this.state.date}</p>
                 
                 
-                <button id={this.state.id} onClick={ (e) => this.state.handleDelete(this.state.index,e.target.id)} 
-                > Delete Flicker</button>
+                <button style={{gridColumn:"span 2", width:"20%", marginLeft:"20%", backgroundColor:"skyblue"}} id={this.state.id} onClick={ (e) => this.state.handleDelete(this.state.index,e.target.id)} 
+                > Delete</button>
 
-                <button id={this.state.id} onClick={ (e) => { this.setState({editing: true, id : e.target.id})}} 
+                <button style={{gridColumn:"span 2", width:"20%", marginRight:"20%", backgroundColor:"skyblue"}}id={this.state.id} onClick={ (e) => { this.setState({editing: true, id : e.target.id})}} 
                 > edit</button>
                
             
             {/* we have to coditionally render the update form here*/}
-               {(this.state.editing? <FlickerForm id={this.state.id} index={this.state.index}/>: console.log("not editing"))}
+               {(this.state.editing? <FlickerForm 
+               id={this.state.id} 
+               index={this.state.index}
+               handleSubmit={this.handleSubmit}
+               />: <p></p>)}
             
             
         </div>

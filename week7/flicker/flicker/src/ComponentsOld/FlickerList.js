@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react'
-import FlickerCard from './FlickerCard'
+import FlickersCard from './FlickerCard'
 // import flickersData from './FlickerData'
 
 // import FormBadge from './FormBadge'
@@ -12,19 +12,19 @@ class FlickerList extends Component {
     render(){
         console.log(this.props)
         
-        const mappedCards = this.props.FlickerCard.map( (card, i) => {
+        const mappedCards = this.props.flickersData.map( (card, i) => {
             return(
-                < FlickerCard
+                < FlickersCard
                 key={i}
                 index={i}
-                author={card.author}
+                authors={card.authors}
                 flickers={card.flickers}
                 date={card.date}
 
-                // handleDelete={this.props.handleDelete}
+                handleDelete={this.props.handleDelete}
                 
-                // handleEdit={this.props.handleEdit}
-                // id={card._id}
+                handleEdit={this.props.handleEdit}
+                id={card._id}
                 
                 />
             )

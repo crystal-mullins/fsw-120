@@ -24,7 +24,7 @@ const Login = ({ imGlobalFunc }) => {
   return (
   
     <div>
-       {imGlobalFunc()}
+      
       <form onSubmit={handleSubmit}>
         User Name:
         <input 

@@ -1,8 +1,6 @@
-// import React, {Component} from './node_modules/react'
-
 import React, {Component} from 'react'
-import FlickerList from './FlickerList'
-import axios from 'axios'
+// import FlickerList from './FlickerList'
+// import axios from 'axios'
 
 
 
@@ -19,13 +17,14 @@ export default class FlickerForm extends Component {
         }
     }
     componentDidMount(){
-        axios.get('/flickers')
-        .then(res =>{
-            console.log("res.data", res.data)
-            this.setState({
-              flickerCard :res.data
-            })
-        })
+        console.log("this is flicker form")
+        // axios.get('/flickers')
+        // .then(res =>{
+        //     console.log("res.data", res.data)
+        //     this.setState({
+        //       flickerCard :res.data
+        //     })
+        // })
     }
     handleChange = (e) => {
     const {name, value} = e.target
@@ -38,29 +37,22 @@ export default class FlickerForm extends Component {
         let newFlickerData= {
             authors: this.state.authors,
             flickers: this.state.flickers,
-            date: this.state.date,
-           
-            
-            
-                
-            
+            date: this.state.date,   
         }
-        this.setState({flickerBadges: [ newFlickerData, ...this.state.flickerBadges],
-            authors:'',
-            flickers:'',
-            date:'',
-            
-            
-         })
-       
-
+        // this.setState( {
+        //     newFlickerData: this.state.newFlickerData,
+        //     authors: this.state.authors,
+        //     flickers: this.state.flickers,
+        //     date:'',    
+        //  })
+         this.props.handleSubmit(newFlickerData)
     }
 
-    handleDelete = (i) => {
-        let editedFlickerArray = this.state.flickerBadges
-        editedFlickerArray.splice(i, 1)
-        this.setState({flickerBadges: editedFlickerArray})
-    }
+    // handleDelete = (i) => {
+    //     let editedFlickerArray = this.state.flickerBadges
+    //     editedFlickerArray.splice(i, 1)
+    //     this.setState({flickerBadges: editedFlickerArray})
+    // }
        
     
     render(){
@@ -102,12 +94,7 @@ export default class FlickerForm extends Component {
                 <button style={{gridColumn:"span 2", width:"50%", marginLeft:"25%"}}>On Submit</button>
 
                 </form>
-                <FlickerList 
-                flickerCard={this.state.flickerCard}
-                handleDelete={this.state.handleDelete}
-                handleEdit={this.state.handleEdit}
-                
-                />
+    
                 </div>
         )
     }

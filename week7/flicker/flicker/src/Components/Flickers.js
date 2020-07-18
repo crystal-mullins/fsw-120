@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../App.css'
 
+// import FlickerCard from '../ComponentsOld/FlickerCard'
+
 export default class FlickerForm extends Component{
               constructor(){
               super()
@@ -8,7 +10,7 @@ export default class FlickerForm extends Component{
                    authors:'',
                    flickers:'',
                    date:'',
-                   flickBadges:[],
+                   flickerCard:[],
                    handleDelete: this.handleDelete,
                    handleEdit: this.handleEdit
     }
@@ -53,7 +55,8 @@ handleDelete = (i) => {
 render(){
   
   return(
-   <div className="home-page">
+   <div >
+    
                 <form onSubmit={this.handleSubmit} className="flick-form-wrapper"
                 
                 >

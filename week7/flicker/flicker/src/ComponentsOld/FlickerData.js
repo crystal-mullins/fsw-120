@@ -1,16 +1,16 @@
-const flickersData = [
+const flickersCard = [
     {
         authors:"Chinese Proverb",
         flickers: "A crisis is an opportunity riding the dangerous wind.",
         date:"n/a"
     },
     {
-        authors:"Christians",
+        authors:"Unknown Christian",
         flickers: "If you are more fortunate than others, build a longer table, not a taller fence.",
         date:"n/a"
     },
     {
-        authors:"Christians",
+        authors:"Unknown Christian",
         flickers: "Let go and let God.",
         date:""
     },
@@ -30,4 +30,4 @@ const flickersData = [
         date:"n/a"
     },
 ]
-export default flickersData
+export default flickersCard

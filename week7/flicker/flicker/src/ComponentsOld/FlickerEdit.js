@@ -47,16 +47,17 @@ axios.put('./flickers/' + id, editedFlicker ).then(res => {
 
 
     render(){
-        
+        console.log("this is flicker edit")
         return(
             <div> 
                 
-                <form id={this.state.id} className="wrapper" onSubmit={(e)=>{
+                <form id={this.state.id}  onSubmit={(e)=>{
                     e.preventDefault()
                     this.handleEdit(this.state, 
                      e.currentTarget.id)
                      window.location.reload()}}>
                 <input
+                className="author-box"
                 type="text"
                 name="authors"
                 placeholder="author:"
@@ -66,6 +67,7 @@ axios.put('./flickers/' + id, editedFlicker ).then(res => {
                 />
                
                 <input
+                className="date-box"
                 type="date"
                 name="date"
                 placeholder="date:"
@@ -75,6 +77,7 @@ axios.put('./flickers/' + id, editedFlicker ).then(res => {
                 />
                
                 <textarea
+                className="flick-input-box"
                 type="text"
                 name="flickers"
                 placeholder="Edit flicker:"

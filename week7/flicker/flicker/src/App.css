@@ -36,12 +36,26 @@
     transform: rotate(360deg);
   }
 }
-.home-wrapper{
+
+.logo-box .img{
+    border: 20px solid blue;
+    padding: 15px;
+   
+    
+  }
+
+
+.body{
+  background-color: plum;
+}
+
+
+.flick-form-wrapper{
   display:  grid;
   grid-template-columns:column;
-  padding: 5%;
-  margin: 5%;
-  border: 20px solid blue;
+  padding: 2%;
+  margin: 2%;
+  border: 20px solid rgba(122, 23, 122, 0.89);
   background-color:plum;
   border-radius: 5%;
 }
@@ -50,9 +64,9 @@
 .home-form-wrapper{
   display:  grid;
   grid-template-columns:column;
-  padding: 5%;
-  margin: 5%;
-  border: 20px solid blue;
+  padding: 2%;
+  margin: 2%;
+  border: 20px solid purple;
   background-color: black;
   border-radius: 5%;
 }
@@ -61,31 +75,50 @@
 }
 .flick-input-box{
 border-radius: 5%;
- margin:5%;
- padding:5%;
+ margin:2%;
+ padding:2%;
  background-color: yellow;
- border: 20px solid blue;
+ border: 20px solid purple;
 justify-content: center;  
 
 }
 
 .author-box{
   border-radius: 5%;
-  margin:5%;
-  padding:5%;
-  background-color:lightpink;
-  border: 20px solid blue;
+  margin:2%;
+  padding:2%;
+  background-color: yellow;
+  border: 20px solid purple;
  justify-content: center;  
  
  }
 
  .date-box{
+   
+  grid-row: "span 1";
   border-radius: 5%;
-  margin:5%;
-  padding:5%;
-  background-color: lightskyblue;
-  border: 20px solid blue;
- justify-content: center;  
+  margin:2%;
+  padding:2%;
+  background-color: lavender;
+  border: 20px solid purple;
+ margin-left: 40%;  
  
+ }
+
+ /* Card.css */
+
+ .card-wrapper{
+   background-color: violet;
+ }
+
+ #edit-form-wrapper{
+  display:  grid;
+  grid-template-columns:column;
+  padding: 2%;
+  margin: 2%;
+  border: 50px solid purple;
+  background-color: black;
+  border-radius: 5%;
+   
  }
  

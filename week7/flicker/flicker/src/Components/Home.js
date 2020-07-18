@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css'
 import FlickerList from '../ComponentsOld/FlickerList'
+import flickersData from '../ComponentsOld/FlickerData'
 
 class FlickerForm extends Component{
               constructor(){
@@ -9,7 +10,7 @@ class FlickerForm extends Component{
                    authors:'',
                    flickers:'',
                    date:'',
-                   flickBadges:[],
+                   flickerBadges: flickersData,
                    handleDelete: this.handleDelete,
                    handleEdit: this.handleEdit
     }
@@ -22,27 +23,23 @@ class FlickerForm extends Component{
 
 
   handleSubmit = (e) =>{
-        
+        console.log(this.state)
     e.preventDefault()
     let newFlickerData= {
         authors: this.state.authors,
         flickers: this.state.flickers,
-        date: this.state.date,
-       
-        
-        
-            
-        
+        date: this.state.date,    
     }
-    this.setState({flickerBadges: [ newFlickerData, ...this.state.flickerBadges],
+    this.setState(prevState => {
+      return({flickerBadges: 
+        [ ...prevState.flickerBadges, newFlickerData ],
         authors:'',
         flickers:'',
         date:'',
-        
-        
-     })
-   
 
+    })
+      
+     })
 }
 handleDelete = (i) => {
   let editedFlickerArray = this.state.flickerBadges
@@ -62,7 +59,7 @@ render(){
 
                       type="text"
                       name="flickers"
-                      placeholder="Enlighten us with a flicker!"
+                      placeholder="Let it Shine, Let it Shine, Let it..."
                       value={this.state.flickers}
                       onChange={this.handleChange}
 
@@ -90,10 +87,10 @@ render(){
                       />
                       
                 
-                <button style={{gridColumn:"span 2", width:"20%", marginLeft:"40%"}}>Do not push</button>
+                <button style={{gridColumn:"span 2", width:"20%", marginLeft:"40%", backgroundColor:"skyblue"}}>Turn On Your Light</button>
             </form>
             <FlickerList 
-                flickerCard={this.state.flickerCard}
+                flickersData={this.state.flickerBadges}
                 handleDelete={this.state.handleDelete}
                 handleEdit={this.state.handleEdit}
                 />
