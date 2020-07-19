@@ -41,7 +41,10 @@ const Login = ({ imGlobalFunc }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button> Login </button>
+        <div>
+        <button style={{gridColumn:"span 2", width:"10%", marginLeft:"3%", backgroundColor:"skyblue"}}>Login </button>
+        </div>
+       
       </form>
       <div>
         

@@ -13,10 +13,15 @@ const Navbar = ({handleUserLogout}) => {
         <Link to='/'> Home </Link>
         <Link to='/flickers'> Flickers </Link> 
         <Link to='/login'> Login </Link>
-        <button onClick={handleUserLogout}> Logout </button>
+       
+
+        <div>
+        <button onClick={handleUserLogout}style={{gridColumn:"span 2", width:"10%", marginLeft:"0%", backgroundColor:"skyblue"}}> Logout </button>
+
+        </div>
       </ul>
       <div className="logo-box">
-      <img src={flickerimg}  alt='flickerimg 'width="800px" height="150px" />
+      <img src={flickerimg}  alt='flickerimg 'width="800px" height="250px" />
 
       </div>
       <div>
