@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Box from '../Boxs/Box'
 
 
 
@@ -66,7 +66,26 @@ class SmallTime extends React.Component {
   render(){
       
       return(
-          <div> {this.props.children} </div>
+          <div> 
+             <button 
+            onClick={this.handleClick}className="st_dj">
+              {this.state.box1}
+              Push ME</button>
+                      
+            
+            
+            {this.props.children} 
+            <Box class="box1" color={this.state.box1} src="https://archive.org/embed/gd1991-09-14.150163.sbd.cm.miller.flac16"/>
+
+            <Box class="box2" color={this.state.box2} src="https://archive.org/embed/gd1994-09-27.150128.sennme88.ragosa.miller.sirmick.flac1648"/>
+
+            <Box class="box3" color={this.state.box3} src="https://archive.org/embed/gd1969-10-25.sbd.miller.flac1644"/>
+
+            <Box class="box4" color={this.state.box4} src="https://archive.org/embed/gd1995-06-25.150028.sbd.dolphinsmile.flac1644"/>
+            </div>
+
+            
+                    
           
       )
     }
