@@ -1,0 +1,7 @@
+.buttons{
+    display: grid;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5%;
+    width: 420px;
+    background-color: green;
+
+}

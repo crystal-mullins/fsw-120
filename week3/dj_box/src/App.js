@@ -1,7 +1,7 @@
 import React from "react"
 import SmallTime from "./Components/SmallTime/SmallTimeDj"
 import './App.css'
-import PartyDj from "./Components/PartyDj/PartyDj"
+// import PartyDj from "./Components/PartyDj/PartyDj"
 
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
     return(
       <div>
         <SmallTime />
-        <PartyDj />
+        {/* <PartyDj /> */}
 
       </div>
     )
