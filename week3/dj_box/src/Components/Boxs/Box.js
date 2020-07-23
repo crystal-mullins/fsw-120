@@ -18,7 +18,7 @@ class Boxs extends Component {
             <div className={this.props.class}
             style={{backgroundColor:"black"}}>
             <div 
-            style={{width: 300, height: 200, margin: 25, backgroundColor:this.props.color}}>{this.props.color}
+            style={{width: 420, height: 200, margin: 25, backgroundColor:this.props.color}}>{this.props.color}
             
             <iframe 
             src={this.props.src} width="400" height="40" frameBorder="0" title='show1'></iframe>
